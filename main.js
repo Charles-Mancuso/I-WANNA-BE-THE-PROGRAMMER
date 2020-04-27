@@ -15,4 +15,7 @@ window.addEventListener('load', function (event) {
   var game = new Game();
   var engine = new engine(1000 / 30, render, update);
 
+  window.addEventListener('resize', display.handleResize);
+  window.addEventListener('keydown', controller.handleKeyDownUp);
+  window.addEventListener('keyup', controller.handleKeyDownUp);
 });
