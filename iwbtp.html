@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <link href ='iwbtp.css' rel='stylesheet' type='text/css' >
+    <title>I WANNA BE THE PROGRAMMER</title>
+  </head>
+
+  <body>
+    <canvas></canvas>
+
+    <script type='text/javascript'>
+      let sources = ['controller', 'display', 'engine', 'game', 'main'];
+
+      for(let index = 0; index < sources.length; index++) {
+        let script = document.createElement('script');
+        script.setAttribute('type', 'text/javascript');
+        script.setAttribute('src', String('/' + sources[index] + '.js'));
+        document.head.appendChild(script);
+      }
+      
+    </script>
+  </body>
+</html>
