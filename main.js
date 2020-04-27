@@ -7,7 +7,7 @@ window.addEventListener('load', function (event) {
   };
 
   var update = function () {
-    game.update():
+    game.update();
   }
 
   var controller = new Controller();

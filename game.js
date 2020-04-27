@@ -23,5 +23,5 @@ const Game = function() {
 };
 
 Game.prototype = {
-  constructor : Game
+  constructor: Game
 };
