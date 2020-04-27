@@ -8,7 +8,7 @@ const Engine = function(time_step, update, render) {
   this.update = update;
   this.render = render;
 
-  this.run = function(time_step) {
+  this.run = function(time_stamp) {
     this.accumulated_time += time_stamp - this.time;
     this.time = time_stamp;
 
