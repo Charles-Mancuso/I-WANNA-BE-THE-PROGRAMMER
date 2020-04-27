@@ -10,12 +10,12 @@
     <canvas></canvas>
 
     <script type='text/javascript'>
-      let sources = ['controller', 'display', 'engine', 'game', 'main'];
+      const sources = ['controller', 'display', 'engine', 'game', 'main'];
 
       for(let index = 0; index < sources.length; index++) {
-        let script = document.createElement('script');
+        const script = document.createElement('script');
         script.setAttribute('type', 'text/javascript');
-        script.setAttribute('src', String(sources[index] + '.js'));
+        script.setAttribute('src', `${sources[index]}.js`);
         document.head.appendChild(script);
       }
 

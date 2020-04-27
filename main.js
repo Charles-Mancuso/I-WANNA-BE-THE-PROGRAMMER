@@ -1,19 +1,19 @@
-window.addEventListener('load', function (event) {
+window.addEventListener('load', function(event) {
   'use strict';
 
-  var render = function () {
+  const render = function () {
     display.renderColor(game.color);
     display.render();
   };
 
-  var update = function () {
+  const update = function () {
     game.update();
   }
 
-  var controller = new Controller();
-  var display = new Display(document.querySelector('canvas'));
-  var game = new Game();
-  var engine = new Engine(1000 / 30, render, update);
+  const controller = new Controller();
+  const display = new Display(document.querySelector('canvas'));
+  const game = new Game();
+  const engine = new Engine(1000 / 30, render, update);
 
   window.addEventListener('resize', display.handleResize);
   window.addEventListener('keydown', controller.handleKeyDownUp);

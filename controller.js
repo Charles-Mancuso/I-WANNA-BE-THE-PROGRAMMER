@@ -5,19 +5,27 @@ const Controller = function () {
   this.up = new Controller.ButtonInput();
 
   this.keyDownUp = function (event) {
-    var down = (event.type == "keydown") ? true : false;
+    const down = (event.type == 'keydown') ? true : false;
 
     switch(event.keyCode) {
-      case 37: this.left.getInput(down); break;
-      case 38: this.up.getInput(down); break;
-      case 39: this.right.getInput(down); break;
-      case 40: this.down.getInput(down);
+      case 37: 
+        this.left.getInput(down); 
+        break;
+      case 38: 
+        this.up.getInput(down); 
+        break;
+      case 39: 
+        this.right.getInput(down); 
+        break;
+      case 40: 
+        this.down.getInput(down);
+        break;
     }
 
-    alert("You pressed a key (" + event.keyCode + ")!");
+    alert(`You pressed a key (${event.keyCode})!`);
   };
 
-  this.handleKeyDownUp = (event) => { this.keyDownUp(event); };
+  this.handleKeyDownUp = (event) => {this.keyDownUp(event)};
 };
 
 Controller.prototype = {

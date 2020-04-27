@@ -1,6 +1,6 @@
 const Display = function(canvas) {
-  this.buffer = document.createElement("canvas").getContext("2d"),
-  this.context = canvas.getContext("2d");
+  this.buffer = document.createElement('canvas').getContext('2d'),
+  this.context = canvas.getContext('2d');
 
   this.renderColor = function(color) {
     this.buffer.fillStyle = color;
@@ -18,10 +18,8 @@ const Display = function(canvas) {
   };
 
   this.resize = function(event) {
-    var height, width;
-
-    height = document.documentElement.clientHeight;
-    width = document.documentElement.clientWidth;
+    const height = document.documentElement.clientHeight;
+    const width = document.documentElement.clientWidth;
 
     this.context.canvas.height = height - 32;
     this.context.canvas.width = width - 32;

@@ -17,8 +17,7 @@ const Game = function() {
       this.colors[index] = color;
       this.shifts[index] = shift;
     }
-
-    this.color = 'rgb(' + this.colors[0] + ',' + this.colors[1] + ',' + this.colors[2] + ")";
+    this.color = `rgb(${this.colors[0]}, ${this.colors[1]}, ${this.colors[2]})`;
   };
 };
 
