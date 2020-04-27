@@ -18,4 +18,7 @@ window.addEventListener('load', function (event) {
   window.addEventListener('resize', display.handleResize);
   window.addEventListener('keydown', controller.handleKeyDownUp);
   window.addEventListener('keyup', controller.handleKeyDownUp);
+
+  display.resize();
+  engine.start();
 });
