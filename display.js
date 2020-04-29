@@ -22,14 +22,8 @@ const Display = function(canvas) {
     ); 
   };
 
-  this.resize = function(event) {
-    const height = document.documentElement.clientHeight;
-    const width = document.documentElement.clientWidth;
+  this.resize = function(width, height, height_width_ratio) {
 
-    this.context.canvas.height = height - 32;
-    this.context.canvas.width = width - 32;
-
-    this.render();
   };
 
   this.handleResize = (event) => {this.resize(event)};
