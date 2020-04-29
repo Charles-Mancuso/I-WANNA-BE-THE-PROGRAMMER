@@ -30,6 +30,7 @@ const Display = function(canvas) {
       this.context.canvas.height = height;
       this.context.canvas.width = height / height_width_ratio;
     }
+    this.context.imageSmoothingEnabled = false;
   };
 
   this.handleResize = (event) => {this.resize(event)};
