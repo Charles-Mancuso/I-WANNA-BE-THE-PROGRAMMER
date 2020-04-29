@@ -3,13 +3,18 @@ const Display = function(canvas) {
   this.context = canvas.getContext('2d');
 
   this.drawRectancle = function(x, y, width, height, color) {
-
+    this.buffer.fillStyle = color;
+    this.buffer.fillRect(Math.floor(x), Math.floor(y), width, height);
   }
-  
+
   this.renderColor = function(color) {
     this.buffer.fillStyle = color;
     this.buffer.fillRect(0, 0, this.buffer.canvas.width, this.buffer.canvas.height);
   };
+
+  this.fill = function(color) {
+    
+  }
 
   this.render = function() { 
     this.context.drawImage(
