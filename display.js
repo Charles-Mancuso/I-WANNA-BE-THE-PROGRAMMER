@@ -23,7 +23,10 @@ const Display = function(canvas) {
   };
 
   this.resize = function(width, height, height_width_ratio) {
-
+    if(height/width > height_width_ratio) {
+      this.context.canvas.height = width * height_width_ratio;
+      this.context.canvas.width = width;
+    }
   };
 
   this.handleResize = (event) => {this.resize(event)};
