@@ -35,10 +35,11 @@ window.addEventListener('load', function(event) {
   const game = new Game();
   const engine = new Engine(1000 / 30, render, update);
 
-  window.addEventListener('resize', display.handleResize);
-  window.addEventListener('keydown', controller.handleKeyDownUp);
-  window.addEventListener('keyup', controller.handleKeyDownUp);
+  window.addEventListener('resize', resize);
+  window.addEventListener('keydown', keyDownUp);
+  window.addEventListener('keyup', keyDownUp);
 
-  display.resize();
+  resize();
+  
   engine.start();
 });
