@@ -34,5 +34,23 @@ const Game = function() {
       this.collideObject(this.player);
     }
   };
-  
+
+  this.update = function() {
+    this.world.update();
+  };
+};
+
+Game.prototype = {
+  constructor: Game
+};
+
+Game.Player = function(x, y) {
+  this.color = '#FF0000';
+  this.height = 16;
+  this.width = 16;
+  this.jumping = true;
+  this.velocity_x = 0;
+  this.velocity_y = 0;
+  this.x = 100;
+  this.y = 50;
 }
