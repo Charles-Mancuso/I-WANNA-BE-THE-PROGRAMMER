@@ -32,8 +32,6 @@ const Display = function(canvas) {
     }
     this.context.imageSmoothingEnabled = false;
   };
-
-  this.handleResize = (event) => {this.resize(event)};
 };
 
 Display.prototype = {
