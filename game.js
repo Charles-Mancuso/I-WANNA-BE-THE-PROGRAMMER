@@ -66,5 +66,11 @@ Game.Player.prototype = {
       this.jumping = true;
       this.velocity_y -= 20;
     }
+  },
+  moveLeft: function() {this.velocity_x -= 0.5},
+  moveRight: function() {this.velocity_x += 0.5},
+  update: function() {
+    this.x += this.velocity_x;
+    this.y += this.velocity_y;
   }
-}
+};
