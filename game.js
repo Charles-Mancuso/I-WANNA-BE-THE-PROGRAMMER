@@ -1,6 +1,7 @@
 const Game = function() {
   this.world = {
     background_color: 'rgba(40, 48, 56, 0.25)',
+    // background_color: 'blue',
     friction: 0.9,
     gravity: 3,
     player: new Game.Player(),
@@ -46,8 +47,9 @@ Game.prototype = {
 
 Game.Player = function(x, y) {
   this.color = '#FF0000';
-  this.height = 16;
-  this.width = 16;
+  // this.color = 'white';
+  this.height = 8;
+  this.width = 8;
   this.jumping = true;
   this.velocity_x = 0;
   this.velocity_y = 0;

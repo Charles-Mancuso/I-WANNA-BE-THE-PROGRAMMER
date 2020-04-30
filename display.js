@@ -2,7 +2,7 @@ const Display = function(canvas) {
   this.buffer = document.createElement('canvas').getContext('2d'),
   this.context = canvas.getContext('2d');
 
-  this.drawRectancle = function(x, y, width, height, color) {
+  this.drawRectangle = function(x, y, width, height, color) {
     this.buffer.fillStyle = color;
     this.buffer.fillRect(Math.floor(x), Math.floor(y), width, height);
   }

@@ -1,13 +1,12 @@
-const Controller = function () {
-
+const Controller = function() {
   this.left = new Controller.ButtonInput();
   this.right = new Controller.ButtonInput();
   this.up = new Controller.ButtonInput();
 
   this.keyDownUp = function(type, key_code) {
-    const down = (event.type == 'keydown') ? true : false;
+    const down = (type == 'keydown') ? true : false;
 
-    switch(event.keyCode) {
+    switch(key_code) {
       case 37: 
         this.left.getInput(down); 
         break;
@@ -19,15 +18,13 @@ const Controller = function () {
         break;
     }
   };
-
-  this.handleKeyDownUp = (event) => {this.keyDownUp(event)};
 };
 
 Controller.prototype = {
   constructor: Controller
 };
 
-Controller.ButtonInput = function (){
+Controller.ButtonInput = function() {
   this.active = this.down = false;
 };
 
