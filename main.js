@@ -1,9 +1,19 @@
 window.addEventListener('load', function(event) {
   'use strict';
 
-  const render = function () {
-    display.renderColor(game.color);
+  const keyDownUp = function(event) {
+    controller.keyDownUp(event.type, event.keyCode);
+  }
+
+  const resize = function(event) {
+    display.resize(document.documentElement.clientWidth - 32,
+                   document.documentElement.clientHeight - 32,
+                   game.world.height / game.world.width);
     display.render();
+  }
+
+  const render = function () {
+
   };
 
   const update = function () {
