@@ -24,6 +24,15 @@ const Game = function() {
         object.y = this.height - object.height;
         object.velocity_y = 0;
       }
+    },
+
+    update: function() {
+      this.player.velocity_y += this.gravity;
+      this.player.update();
+      this.player.velocity_x *= this.friction;
+      this.player.velocity_y *= this.friction;
+      this.collideObject(this.player);
     }
-  }
+  };
+  
 }
