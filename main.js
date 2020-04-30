@@ -12,11 +12,15 @@ window.addEventListener('load', function(event) {
     display.render();
   }
 
-  const render = function () {
-
+  const render = function() {
+    display.fill(game.world.background_color);
+    display.fillRectangle(game.world.player.x, game.world.player.y, 
+                          game.world.player.width, game.world.player.height,
+                          game.world.player.color)
+    display.render();
   };
 
-  const update = function () {
+  const update = function() {
     game.update();
   }
 
